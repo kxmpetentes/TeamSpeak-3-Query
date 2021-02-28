@@ -2,6 +2,8 @@ package de.kxmpetentes.tsquery.config;
 
 import lombok.Data;
 
+import java.util.ArrayList;
+
 /**
  * @author kxmpetentes
  * Website: kxmpetentes.de
@@ -17,5 +19,7 @@ public class Config {
     private String password = "secretpassword";
     private String nickname = "VeryStupidBot";
     private int virtualServerId = 1;
+    private int supportChannelId = 100;
+    private ArrayList<Integer> supportNotificationRanks = new ArrayList<>();
 
 }

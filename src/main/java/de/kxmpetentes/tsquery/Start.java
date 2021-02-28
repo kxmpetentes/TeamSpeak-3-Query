@@ -10,7 +10,7 @@ package de.kxmpetentes.tsquery;
 public class Start {
 
     public static void main(String[] args) {
-        Bootstrap bootstrap = new Bootstrap();
-        bootstrap.onEnable();
+        BotApplication botApplication = new BotApplication();
+        botApplication.onEnable();
     }
 }
