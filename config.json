@@ -1,0 +1,7 @@
+{
+  "host": "host",
+  "username": "serveradmin",
+  "password": "secretpassword",
+  "nickname": "VeryStupidBot",
+  "virtualServerId": 1
+}
