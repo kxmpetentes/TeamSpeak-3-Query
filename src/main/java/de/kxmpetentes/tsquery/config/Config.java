@@ -21,5 +21,7 @@ public class Config {
     private int virtualServerId = 1;
     private int supportChannelId = 100;
     private ArrayList<Integer> supportNotificationRanks = new ArrayList<>();
+    private int afkChannelId = 100;
+    private String afkMessage = "Du wurdest in den AFK-Channel gemoved";
 
 }

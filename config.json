@@ -3,5 +3,12 @@
   "username": "serveradmin",
   "password": "secretpassword",
   "nickname": "VeryStupidBot",
-  "virtualServerId": 1
+  "virtualServerId": 1,
+  "supportChannelId": 100,
+  "supportNotificationRanks": [
+    1,
+    2
+  ],
+  "afkChannelId": 100,
+  "afkMessage": "Du wurdest in den AFK-Channel gemoved"
 }

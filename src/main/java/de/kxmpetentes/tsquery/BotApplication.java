@@ -6,6 +6,7 @@ import com.github.theholywaffle.teamspeak3.TS3Config;
 import com.github.theholywaffle.teamspeak3.TS3Query;
 import com.github.theholywaffle.teamspeak3.api.exception.TS3CommandFailedException;
 import de.kxmpetentes.tsquery.config.Config;
+import de.kxmpetentes.tsquery.listener.AfkListener;
 import de.kxmpetentes.tsquery.listener.EventManager;
 import de.kxmpetentes.tsquery.listener.SupportListener;
 import lombok.Getter;
@@ -33,6 +34,7 @@ public class BotApplication {
     private TS3Query query;
     private Config config;
     private EventManager eventManager;
+    private AfkListener afkListener;
 
     public void onEnable() {
 
@@ -42,12 +44,17 @@ public class BotApplication {
         loadQuery();
         loadEventManager();
 
+        afkListener = new AfkListener(this);
+
     }
 
     public void onDisable() {
+        afkListener.cancelTimer();
+
         if (query.isConnected()) {
             query.exit();
         }
+
     }
 
     @SneakyThrows
