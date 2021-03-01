@@ -46,7 +46,7 @@ public class AfkListener {
                 }
 
             }
-        }, 1000, 60 * 1000);
+        }, 0, 1);
     }
 
     public void cancelTimer() {

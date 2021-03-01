@@ -33,9 +33,9 @@ public class SupportListener extends TS3EventAdapter {
 
             for (Client apiClient : api.getClients()) {
                 for (int rankId : config.getSupportNotificationRanks()) {
-                    if (apiClient.isInServerGroup(rankId) && !client.isInServerGroup(rankId)) {
+                    if (apiClient.isInServerGroup(rankId)) {
                         support = true;
-                        api.pokeClient(apiClient.getId(), client.getNickname() + " benötigt Support!");
+                        api.sendPrivateMessage(apiClient.getId(), client.getNickname() + " benötigt Support!");
                     }
                 }
             }

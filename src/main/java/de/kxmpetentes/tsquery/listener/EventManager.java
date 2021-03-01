@@ -23,4 +23,8 @@ public class EventManager {
         api.addTS3Listeners(listener);
     }
 
+    public void registerAllEvents() {
+        api.registerAllEvents();
+    }
+
 }

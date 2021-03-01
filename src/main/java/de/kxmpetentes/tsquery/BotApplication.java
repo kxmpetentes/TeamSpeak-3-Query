@@ -46,6 +46,8 @@ public class BotApplication {
 
         afkListener = new AfkListener(this);
 
+        System.out.println("Bot started");
+
     }
 
     public void onDisable() {
@@ -97,6 +99,9 @@ public class BotApplication {
         eventManager = new EventManager(this);
 
         new SupportListener(eventManager);
+
+
+        eventManager.registerAllEvents();
     }
 
 }
