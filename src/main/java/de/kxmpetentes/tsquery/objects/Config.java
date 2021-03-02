@@ -1,4 +1,4 @@
-package de.kxmpetentes.tsquery.config;
+package de.kxmpetentes.tsquery.objects;
 
 import lombok.Data;
 
@@ -23,5 +23,7 @@ public class Config {
     private ArrayList<Integer> supportNotificationRanks = new ArrayList<>();
     private int afkChannelId = 100;
     private String afkMessage = "Du wurdest in den AFK-Channel gemoved";
+    private String channelHoppingWarnMessage = "Unterlasse das ChannelHopping";
+    private String channelHoppingKickMessage = "ChannelHopping ist nicht erlaubt!";
 
 }

@@ -5,10 +5,11 @@ import com.github.theholywaffle.teamspeak3.TS3Api;
 import com.github.theholywaffle.teamspeak3.TS3Config;
 import com.github.theholywaffle.teamspeak3.TS3Query;
 import com.github.theholywaffle.teamspeak3.api.exception.TS3CommandFailedException;
-import de.kxmpetentes.tsquery.config.Config;
 import de.kxmpetentes.tsquery.listener.AfkListener;
+import de.kxmpetentes.tsquery.listener.ChannelHoppingListener;
 import de.kxmpetentes.tsquery.listener.EventManager;
 import de.kxmpetentes.tsquery.listener.SupportListener;
+import de.kxmpetentes.tsquery.objects.Config;
 import lombok.Getter;
 import lombok.SneakyThrows;
 
@@ -99,7 +100,7 @@ public class BotApplication {
         eventManager = new EventManager(this);
 
         new SupportListener(eventManager);
-
+        new ChannelHoppingListener(eventManager);
 
         eventManager.registerAllEvents();
     }

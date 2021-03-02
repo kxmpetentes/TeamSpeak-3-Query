@@ -3,7 +3,7 @@ package de.kxmpetentes.tsquery.listener;
 import com.github.theholywaffle.teamspeak3.TS3Api;
 import com.github.theholywaffle.teamspeak3.api.wrapper.Client;
 import de.kxmpetentes.tsquery.BotApplication;
-import de.kxmpetentes.tsquery.config.Config;
+import de.kxmpetentes.tsquery.objects.Config;
 
 import java.util.Timer;
 import java.util.TimerTask;

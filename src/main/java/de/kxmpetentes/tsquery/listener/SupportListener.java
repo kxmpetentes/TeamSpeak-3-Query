@@ -5,7 +5,7 @@ import com.github.theholywaffle.teamspeak3.api.event.ClientMovedEvent;
 import com.github.theholywaffle.teamspeak3.api.event.TS3EventAdapter;
 import com.github.theholywaffle.teamspeak3.api.wrapper.Client;
 import de.kxmpetentes.tsquery.BotApplication;
-import de.kxmpetentes.tsquery.config.Config;
+import de.kxmpetentes.tsquery.objects.Config;
 
 /**
  * @author kxmpetentes
@@ -26,6 +26,10 @@ public class SupportListener extends TS3EventAdapter {
     @Override
     public void onClientMoved(ClientMovedEvent event) {
         Client client = api.getClientInfo(event.getClientId());
+
+        if (client == null) {
+            return;
+        }
 
         if (event.getTargetChannelId() == config.getSupportChannelId()) {
 

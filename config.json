@@ -10,5 +10,7 @@
     2
   ],
   "afkChannelId": 100,
-  "afkMessage": "Du wurdest in den AFK-Channel gemoved"
+  "afkMessage": "Du wurdest in den AFK-Channel gemoved",
+  "channelHoppingWarnMessage": "Unterlasse das ChannelHopping",
+  "channelHoppingKickMessage": "ChannelHopping ist nicht erlaubt!"
 }
